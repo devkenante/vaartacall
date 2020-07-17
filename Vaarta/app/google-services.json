@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "656912818944",
+    "firebase_url": "https://vaarta-40b8e.firebaseio.com",
+    "project_id": "vaarta-40b8e",
+    "storage_bucket": "vaarta-40b8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656912818944:android:13b43c368ce295f4f609e5",
+        "android_client_info": {
+          "package_name": "com.varenia.vaarta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656912818944-fhkeo948k1uddm42hs6r9hbo2gpoji4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varenia.vaarta",
+            "certificate_hash": "c35b9ddacbdded5bc0b0cf19013a8206da0354c8"
+          }
+        },
+        {
+          "client_id": "656912818944-vrpulaap2qspg5pnmn0ah9r19vk8leaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBovOO5Gqz28HvLqZIuoSzplAPLSoHWwFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656912818944-vrpulaap2qspg5pnmn0ah9r19vk8leaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

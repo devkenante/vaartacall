@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MMLayout"
+    android:padding="20dp"
+    android:background="@color/black">
+
+    <LinearLayout
+        style="@style/WWLayout"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            style="@style/WWLayout"
+            android:layout_gravity="center"
+            android:id="@+id/loadingText"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/rejoinButton"
+            style="@style/WWLayout"
+            android:text="Click to rejoin"
+            android:layout_marginTop="25dip"
+            android:background="@null"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

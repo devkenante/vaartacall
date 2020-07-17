@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/usersListFL"
+    style="@style/MMLayout"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.UsersListFragment">
+
+    <LinearLayout
+        style="@style/MMLayout"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/WWLayout"
+            android:layout_margin="16dp"
+            android:text="@string/users_on_call"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!--<android.support.v7.widget.RecyclerView
+            style="@style/MMLayout"
+            android:layout_marginTop="20dp"
+            android:id="@+id/usersListRV"/>-->
+
+        <ScrollView style="@style/MMLayout">
+
+            <LinearLayout
+                android:id="@+id/usersListContainerLL"
+                style="@style/MWLayout"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

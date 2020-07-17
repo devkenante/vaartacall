@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MMLayout"
+    android:focusable="true"
+   >
+
+    <FrameLayout
+        android:id="@+id/videoShowFL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageFL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call_top_fl">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/messageFL"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoShowFL">
+
+        <LinearLayout
+            android:id="@+id/sendChatLL"
+            style="@style/MMLayout"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+            <ImageButton
+                android:id="@+id/sendattachment"
+                style="@style/WWLayout"
+                android:layout_gravity="center"
+                android:background="@drawable/attachment_chat" />
+
+            <com.varenia.vaarta.customUiClasses.CustomEditText
+                android:id="@+id/callTypeMessageET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:hint="@string/enter_text" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+                <ImageButton
+                    android:id="@+id/sendMessageIB"
+                    style="@style/WWLayout"
+                    android:layout_gravity="center"
+                    android:background="@drawable/send_button" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/beginChatTV"
+            style="@style/MWLayout"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/no_users_to_chat" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintBottom_toTopOf="@+id/messageFL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call_top_fl" />
+
+    <FrameLayout
+        android:id="@+id/loadingFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/loading_layout"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/noNetFl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/no_net_access_layout" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/call_top_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            style="@style/WMLayout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/closeCallIV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/call_cut_icon" />
+
+            <TextView
+                android:id="@+id/userNameTV"
+                style="@style/WWLayout"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/user_name_background"
+                android:textColor="#c7c7c7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionBarIconsLL"
+            style="@style/WWLayout"
+            android:layout_gravity="end|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/usersListIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_users" />
+
+            <ImageView
+                android:id="@+id/screenShareIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/screen_share"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/rotateCameraIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rotate_camera"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/callActivityFL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/user_connected_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintBottom_toTopOf="@id/messageFL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call_top_fl" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

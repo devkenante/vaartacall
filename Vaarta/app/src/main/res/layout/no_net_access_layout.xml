@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MWLayout"
+    android:layout_gravity="center"
+    android:layout_margin="16dip"
+    app:cardCornerRadius="15dip"
+    app:cardElevation="15dip">
+
+    <LinearLayout
+        style="@style/MMLayout"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout style="@style/MWLayout">
+
+            <TextView
+                android:tag="no_internet_text"
+                style="@style/WWLayout"
+                android:layout_gravity="center"
+                android:layout_margin="16dip"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/no_internet_access"
+                android:textColor="#23676C"
+                android:textSize="18sp" />
+
+        </FrameLayout>
+
+        <ImageView
+            style="@style/WWLayout"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/no_internet_connection" />
+
+        <LinearLayout
+            style="@style/WWLayout"
+            android:layout_margin="16dip"
+            android:gravity="center"
+            android:id="@+id/openInternetSettings"
+            android:orientation="horizontal">
+
+            <TextView
+                android:tag="internet_text_1"
+                style="@style/WWLayout"
+                android:gravity="center"
+                android:text="@string/internet_settings_one"
+                android:textColor="#515050"
+                android:textSize="16sp" />
+
+            <TextView
+                android:tag="internet_text_2"
+                style="@style/WWLayout"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:text="@string/internet_settings_two"
+                android:textColor="#8CC500"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MMLayout"
+    tools:context=".activities.SetupCallWithLink"
+    >
+
+    <TextView
+        android:id="@+id/dynamicLinkUserNameTV"
+        style="@style/WWLayout"
+        android:textSize="20sp"
+        android:layout_margin="16dip"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <LinearLayout
+        android:id="@+id/dynamicLinkStatusLL"
+        style="@style/MMLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dip">
+
+        <ProgressBar
+            android:tag="progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dip"
+            android:max="8"/>
+
+        <TextView
+            android:tag="statusTV"
+            style="@style/WWLayout"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dip"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/dynamicLinkPermissionFL"
+        style="@style/MWLayout"
+        android:padding="16dip"
+        android:background="@color/white"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:tag="actionText"
+            style="@style/WWLayout"
+            android:layout_gravity="start" />
+
+        <TextView
+            android:tag="actionButton"
+            style="@style/WWLayout"
+            android:layout_gravity="end"
+            android:textColor="@color/red"/>
+
+    </FrameLayout>
+
+</FrameLayout>

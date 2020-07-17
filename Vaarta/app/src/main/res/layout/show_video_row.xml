@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MMLayout"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/video_row_background">
+
+    <FrameLayout
+        style="@style/MMLayout"
+        android:id="@+id/videoMainFL">
+
+        <com.kenante.video.view.KenanteSurfaceView
+            android:tag="videoShowView"
+            style="@style/WWLayout"
+            android:layout_margin="0.5dp"/>
+
+        <FrameLayout
+            style="@style/MWLayout"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:tag="videoShowUserNameTV"
+                android:id="@+id/videoShowUserNameTV"
+                style="@style/WWLayout"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/user_name_background"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:tag="videoVoiceControl"
+                android:id="@+id/videoVoiceControl"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_mic_white_48"/>
+
+            <ImageButton
+                android:tag="videoControl"
+                android:id="@+id/videoControl"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start|bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/video_control_icon_enabled"/>
+
+        </FrameLayout>
+
+
+
+    </FrameLayout>
+
+    <TextView
+        android:tag="connectionStatusTV"
+        android:id="@+id/connectionStatusTV"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="end"
+        android:background="@drawable/user_disconneted"/>
+
+    <TextView
+        android:tag="screenSharingTV"
+        style="@style/WWLayout"
+        android:text="Your screen is getting shared"
+        android:layout_gravity="center"
+        android:textColor="@color/light_grey"
+        android:id="@+id/screenSharingTV"
+        android:visibility="gone"/>
+
+</FrameLayout>

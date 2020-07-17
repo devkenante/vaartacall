@@ -1,0 +1,2 @@
+rootProject.name='Vaarta'
+include ':app', ':kenante-core', ':kenante-video-conference', ':kenante-chat'

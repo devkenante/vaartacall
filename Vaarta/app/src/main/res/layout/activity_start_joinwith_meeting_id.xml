@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.StartJoinwithMeetingId"
+    android:background="@color/white">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cornerRadius="2dp"
+    android:padding="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <Button
+        android:id="@+id/start_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="Start call"
+        android:textColor="#F8F5F5"
+        app:cornerRadius="2dp"
+        android:padding="10dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="OR"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/start_call"
+
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/edt_meeting_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/meesting_id_back"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dip"
+        android:hint="Enter meeting id"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_or"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_join_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#D50000"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Join Call"
+        android:textColor="#F8F6F6"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/edt_meeting_id" />
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_users"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Invite People"
+                android:textColor="@color/red" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_invite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label"
+                android:padding="5dp"
+                app:endIconContentDescription="@string/content_description_end_icon"
+                app:endIconDrawable="@drawable/contact_list"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edt_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtLoadInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+
+                <ListView
+                    android:id="@+id/list_contats"
+                    android:layout_width="match_parent"
+                    android:layout_height="357dp"
+
+                    />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    >
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/tag_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:theme="@style/Theme.MaterialComponents.Light" />
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/add_invite_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add to invite list "
+                        android:layout_weight=".5"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/send_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Send invite "
+                        android:layout_weight=".5"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

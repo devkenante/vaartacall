@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_thankyou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_body_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/tv_note"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Thank you for using vaartacall.com!"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_thankyou"
+        tools:layout_editor_absoluteX="-16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_thankyou"
+        tools:layout_editor_absoluteX="0dp"
+        android:gravity="right">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_thanku_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"
+            android:layout_margin="10dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_share_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share App"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

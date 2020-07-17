@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MWLayout"
+    android:layout_gravity="center"
+    android:layout_margin="16dip"
+    app:cardElevation="15dip"
+    app:cardCornerRadius="15dip">
+
+    <LinearLayout
+        style="@style/MMLayout"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            style="@style/WWLayout"
+            android:text="@string/please_wait"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:textColor="#23676C"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <ImageView
+            style="@style/WWLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/wait_icon"/>
+
+        <TextView
+            style="@style/WWLayout"
+            android:layout_margin="16dip"
+            android:text="@string/no_person_in_conf"
+            android:gravity="center"
+            android:textColor="#515050"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

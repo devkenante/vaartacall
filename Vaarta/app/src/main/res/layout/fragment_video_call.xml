@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.VideoCallFragment">
+
+
+    <include
+        android:id="@+id/conf_call_one_person_view"
+        layout="@layout/conf_call_wait_layout"/>
+
+    <GridLayout
+        android:id="@+id/video_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        style="@style/MWLayout"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottomChatFragment"/>
+
+    <RelativeLayout
+        style="@style/MMLayout">
+        <com.kenante.video.view.KenanteSurfaceView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:id="@+id/enlargeUserRV"
+            android:tag="videoexpand"
+            android:visibility="gone"
+           />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandclose"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:background="@drawable/cross_icon"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

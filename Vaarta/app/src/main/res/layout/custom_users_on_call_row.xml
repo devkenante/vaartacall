@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/MWLayout">
+
+    <FrameLayout
+        style="@style/MWLayout"
+        android:padding="16dp">
+
+        <TextView
+            android:tag="userOnCallNameTV"
+            style="@style/WWLayout"
+            android:text="User Name"
+            android:id="@+id/userOnCallNameTV"
+            android:textSize="17sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/light_grey"/>
+
+        <TextView
+            android:tag="userOnCallStatus"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/userOnCallStatus"
+            android:background="@drawable/user_disconneted"
+            android:layout_gravity="end|center"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>
