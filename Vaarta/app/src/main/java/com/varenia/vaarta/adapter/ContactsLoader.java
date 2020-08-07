@@ -52,7 +52,7 @@ public class ContactsLoader  extends AsyncTask<String,Void,Void> {
                     uri,
                     projection,
                     ContactsContract.Contacts.DISPLAY_NAME + " LIKE ?",
-                    new String[]{filter},
+                    new String[]{"%"+filter+"%"},
                     ContactsContract.Contacts.DISPLAY_NAME + " ASC"
             );
         }else {
@@ -84,20 +84,15 @@ public class ContactsLoader  extends AsyncTask<String,Void,Void> {
             HashSet<String> phonehash=new HashSet<>();
             while(cursor.moveToNext()) {
                 if (Integer.parseInt(cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))) > 0) {
-
                     String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
                     String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-
-
                     Cursor phoneCursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                             null,
                             ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?",
                             new String[]{id},
                             null
                     );
-
                     if (phoneCursor != null && phoneCursor.getCount() > 0) {
-
                         while (phoneCursor.moveToNext()) {
                             String phId = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone._ID));
 
@@ -145,7 +140,7 @@ public class ContactsLoader  extends AsyncTask<String,Void,Void> {
     @Override
     protected void onProgressUpdate(Void[] v){
 
-        if(this.tempContactHolder.size()>=100) {
+        if(this.tempContactHolder.size()>0) {
 
             contactsListAdapter.addContacts(tempContactHolder);
 

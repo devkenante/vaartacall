@@ -13,8 +13,8 @@ android {
         applicationId "com.varenia.vaarta"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 4
-        versionName "1.012"
+        versionCode 5
+        versionName "1.013"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

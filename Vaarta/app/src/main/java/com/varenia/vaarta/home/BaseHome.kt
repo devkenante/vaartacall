@@ -14,10 +14,7 @@ import android.util.Log
 import android.util.Patterns
 import android.util.TypedValue
 import android.view.View
-import android.widget.Button
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
@@ -72,6 +69,7 @@ class BaseHome : AppCompatActivity(),View. OnClickListener{
     var send_invite_button:Button?=null
     var CONTACT_PICK_REQUEST=100
     var sendinviteArraylist=ArrayList<Contact>()
+    var auto_tv_contact: AutoCompleteTextView?=null
     val handler = Handler(KenanteSettings.getInstance().getContext()?.mainLooper!!)
 
     companion object {
@@ -108,8 +106,15 @@ class BaseHome : AppCompatActivity(),View. OnClickListener{
 
         inputtextlayout!!.setEndIconOnClickListener(View.OnClickListener {
             Log.i("icon","clicked")
-            loadContacts("");
-
+            if(!contactsListAdapter!!.isEmpty){
+                contactsListAdapter!!.contactsList.contactArrayList.clear()
+                contactsListAdapter!!.notifyDataSetChanged()
+            }
+            if(!edttextinput!!.text!!.isEmpty())
+                 loadContacts(edttextinput!!.text.toString());
+            else{
+                 loadContacts("");
+            }
         })
     }
 
@@ -433,7 +438,6 @@ class BaseHome : AppCompatActivity(),View. OnClickListener{
                     call: Call<MeetingInvitationResp>,
                     response: Response<MeetingInvitationResp>
                 ) {
-
                     /*On success of login
                     1. Get details of current user.
                     2. Get details of all the other users present in same room.*/
